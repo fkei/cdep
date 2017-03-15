@@ -1,0 +1,63 @@
+#!/bin/bash
+
+fn_yes_no() {
+  while true; do
+    read -r -p "Are You Sure? [Y/n] " ___input
+    case ${___input} in
+      [yY][eE][sS]|[yY])
+        return 0;
+	    ;;
+      [nN][oO]|[nN])
+        return 1;
+        ;;
+    esac
+  done;
+}
+
+TARGET_DIR=$1
+OUT_SCRIPT=${TARGET_DIR}/cdep
+OUT_CONF=${TARGET_DIR}/cdep.conf
+OUT_LOCK=${TARGET_DIR}/cdep.lock
+
+echo "# =="
+echo "  script file:  ${OUT_SCRIPT}"
+echo "  conf file:    ${OUT_CONF}"
+echo "  lock file:    ${OUT_LOCK}"
+echo "# =="
+echo ""
+
+if [ -f ${OUT_SCRIPT} -o -f ${OUT_CONF} -o -f ${OUT_LOCK} ]; then
+  echo "[WARN] It will be overwritten. backup please."
+fi
+
+ret=`fn_yes_no`
+[ $? -ne 0 ] && echo "stop command." && exit 1
+
+curl -fsSL "https://raw.githubusercontent.com/fkei/cdep/develop/cdep" > ${OUT_SCRIPT}
+chmod +x ${OUT_SCRIPT}
+
+cat <<_EOT_ > ${OUT_CONF}
+# scm service domain. github.com, gitlab.com, bitbucket.org, golang.org, gopkg.in ...
+SERVICE="XXXXXXXXXX"
+
+# scm service organization name.
+ORGANIZATION="YYYYYYYYYY"
+
+# scm repository name
+REPOSITORY="ZZZZZZZZZZ"
+_EOT_
+
+cat <<_EOT_ > ${OUT_LOCK}
+# {scm} {repository url} {repository name} {recursive flag}
+# - scm (Required)
+# - repository url (Required)
+# - repository name (Required)
+# - recursive flag (Optional)
+#
+# sparator:space
+#
+# ex) git github.com/goadesign/goa 8f0fdca409904318050f9e03579c3878f8928826 recursive
+_EOT_
+
+echo
+echo "Successful. Please edit conf. ${OUT_CONF}"
