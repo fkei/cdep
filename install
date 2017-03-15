@@ -1,9 +1,4 @@
 #!/bin/bash
-# ENV: CDEP_PATH
-
-env
-echo
-echo $1
 
 fn_yes_no() {
   while true; do
@@ -20,10 +15,6 @@ fn_yes_no() {
 }
 
 TARGET_DIR=$1
-if [ "x${CDEP_PATH}" != "x" ]; then
-  TARGET_DIR=${CDEP_PATH}
-fi
-
 OUT_SCRIPT=${TARGET_DIR}/cdep
 OUT_CONF=${TARGET_DIR}/cdep.conf
 OUT_LOCK=${TARGET_DIR}/cdep.lock
