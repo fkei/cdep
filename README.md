@@ -22,8 +22,6 @@ Select(/xxxx/yyyy) install directory.
 $ bash <(curl -s https://raw.githubusercontent.com/fkei/cdep/develop/install) /xxxx/yyyy
 ```
 
-> TIPS: append .gitignore <- ./vendor
-
 # Setup
 
 Edit configure file. `cdep.conf`
@@ -46,17 +44,17 @@ Edit dependency package list file. `cdep.lock`
 Install and Update
 
 ```
-$ ./vendor install
+$ ./cdep install
 ```
 
 Uninstall
 
 ```
-$ ./vendor uninstall
+$ ./cdep uninstall
 ```
 
 Help
 
 ```
-$ ./vendor help
+$ ./cdep help
 ```
