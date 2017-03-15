@@ -32,9 +32,9 @@ if [ "x${CDEP_PATH}" != "x" ]; then
   TARGET_DIR=${CDEP_PATH}
 fi
 
-OUT_SCRIPT=${TARGET_DIR}/vendor
-OUT_CONF=${TARGET_DIR}/vendor.conf
-OUT_LOCK=${TARGET_DIR}/vendor.lock
+OUT_SCRIPT=${TARGET_DIR}/cdep
+OUT_CONF=${TARGET_DIR}/cdep.conf
+OUT_LOCK=${TARGET_DIR}/cdep.lock
 
 echo "# =="
 echo -e "  script file:\t\t${OUT_SCRIPT}"
@@ -52,17 +52,17 @@ ret=`fn_yes_no`
 
 
 
-curl -fsSL https://raw.githubusercontent.com/fkei/cdep/master/install -O ${OUT_SCRIPT}
+curl -fsSL https://raw.githubusercontent.com/fkei/cdep/master/cdep -O ${OUT_SCRIPT}
 
 cat <<_EOT_ > ${OUT_CONF}
 # scm service domain. github.com, gitlab.com, bitbucket.org, golang.org, gopkg.in ...
-VENDOR_SERVICE="XXXXXXXXXX"
+SERVICE="XXXXXXXXXX"
 
 # scm service organization name.
-VENDOR_ORGANIZATION="YYYYYYYYYY"
+ORGANIZATION="YYYYYYYYYY"
 
 # scm repository name
-VENDOR_REPOSITORY="ZZZZZZZZZZ"
+REPOSITORY="ZZZZZZZZZZ"
 _EOT_
 
 cat <<_EOT_ > ${OUT_LOCK}

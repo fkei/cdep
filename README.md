@@ -7,6 +7,24 @@ Classic Go dependency tool
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/fkei/cdep/develop/install)"
 ```
 
-# Environment
+> Environment: `export CDEP_PATH={{INSTALL PATH}}`
 
-`export CDEP_PATH={{INSTALL PATH}}`
+# Use
+
+Install and Update
+
+```
+$ ./vendor install
+```
+
+Uninstall
+
+```
+$ ./vendor uninstall
+```
+
+Help
+
+```
+$ ./vendor help
+```
