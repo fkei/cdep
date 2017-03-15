@@ -48,7 +48,7 @@ if [ -f ${OUT_SCRIPT} -o -f ${OUT_CONF} -o -f ${OUT_LOCK} ]; then
 fi
 
 ret=`fn_yes_no`
-[ $? -ne 0 ] && fn_warn_log "stop command." && exit 1
+[ $? -ne 0 ] && echo "stop command." && exit 1
 
 
 
