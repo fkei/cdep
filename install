@@ -29,7 +29,7 @@ __execpath(){
   popd >/dev/null 2>&1
   echo ${_dir}
 }
-__SCRIPT_DIR=`__execpath $0`
+__SCRIPT_DIR=`__execpath $1`
 
 TARGET_DIR=${__SCRIPT_DIR}
 if [ "x${CDEP_PATH}" != "x" ]; then
