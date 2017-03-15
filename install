@@ -19,19 +19,19 @@ fn_yes_no() {
   done;
 }
 
-__execpath(){
-  if [ ! -e "$1" ]; then
-    return 1
-  fi
-  pushd `dirname $1` >/dev/null 2>&1
-  [ $? -eq 1 ] && exit 1
-  _dir=`pwd`
-  popd >/dev/null 2>&1
-  echo ${_dir}
-}
-__SCRIPT_DIR=`__execpath $1`
+# __execpath(){
+#   if [ ! -e "$1" ]; then
+#     return 1
+#   fi
+#   pushd `dirname $1` >/dev/null 2>&1
+#   [ $? -eq 1 ] && exit 1
+#   _dir=`pwd`
+#   popd >/dev/null 2>&1
+#   echo ${_dir}
+# }
+# __SCRIPT_DIR=`__execpath $1`
 
-TARGET_DIR=${__SCRIPT_DIR}
+TARGET_DIR=$1
 if [ "x${CDEP_PATH}" != "x" ]; then
   TARGET_DIR=${CDEP_PATH}
 fi
