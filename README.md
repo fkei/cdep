@@ -24,6 +24,23 @@ $ bash <(curl -s https://raw.githubusercontent.com/fkei/cdep/develop/install) /x
 
 > TIPS: append .gitignore <- ./vendor
 
+# Setup
+
+Edit configure file. `cdep.conf`
+
+```
+# scm service domain. github.com, gitlab.com, bitbucket.org, golang.org, gopkg.in ...
+SERVICE="XXXXXXXXXX"
+
+# scm service organization name.
+ORGANIZATION="YYYYYYYYYY"
+
+# scm repository name
+REPOSITORY="ZZZZZZZZZZ"
+```
+
+Edit dependency package list file. `cdep.lock`
+
 # Use
 
 Install and Update
