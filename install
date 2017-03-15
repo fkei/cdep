@@ -1,6 +1,10 @@
 #!/bin/bash
 # ENV: CDEP_PATH
 
+env
+echo
+echo $1
+
 fn_yes_no() {
   while true; do
     read -r -p "Are You Sure? [Y/n] " ___input
@@ -37,9 +41,9 @@ OUT_CONF=${TARGET_DIR}/cdep.conf
 OUT_LOCK=${TARGET_DIR}/cdep.lock
 
 echo "# =="
-echo -e "  script file:\t\t${OUT_SCRIPT}"
-echo -e "  conf   file:\t\t${OUT_CONF}"
-echo -e "  lock   file:\t\t${OUT_LOCK}"
+echo "  script file:  ${OUT_SCRIPT}"
+echo "  conf file:    ${OUT_CONF}"
+echo "  lock file:    ${OUT_LOCK}"
 echo "# =="
 echo ""
 
