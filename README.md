@@ -22,9 +22,7 @@ Select(/xxxx/yyyy) install directory.
 $ bash <(curl -s https://raw.githubusercontent.com/fkei/cdep/develop/install) /xxxx/yyyy
 ```
 
-> Environment: `export CDEP_PATH={{INSTALL PATH}}`
-
-> append .gitignore -> ./vendor
+> TIPS: append .gitignore <- ./vendor
 
 # Use
 
