@@ -9,6 +9,8 @@ $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/fkei/cdep/develop/instal
 
 > Environment: `export CDEP_PATH={{INSTALL PATH}}`
 
+> append .gitignore -> ./vendor
+
 # Use
 
 Install and Update

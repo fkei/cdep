@@ -50,9 +50,7 @@ fi
 ret=`fn_yes_no`
 [ $? -ne 0 ] && echo "stop command." && exit 1
 
-
-
-curl -fsSL https://raw.githubusercontent.com/fkei/cdep/develop/cdep -O ${OUT_SCRIPT}
+curl -fsSL "https://raw.githubusercontent.com/fkei/cdep/develop/cdep" > ${OUT_SCRIPT}
 
 cat <<_EOT_ > ${OUT_CONF}
 # scm service domain. github.com, gitlab.com, bitbucket.org, golang.org, gopkg.in ...
@@ -78,4 +76,4 @@ cat <<_EOT_ > ${OUT_LOCK}
 _EOT_
 
 echo
-echo "edit conf please. ${OUT_CONF}"
+echo "Successful. Please edit conf. ${OUT_CONF}"
