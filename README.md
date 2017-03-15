@@ -22,8 +22,6 @@ Select(/xxxx/yyyy) install directory.
 $ bash <(curl -s https://raw.githubusercontent.com/fkei/cdep/develop/install) /xxxx/yyyy
 ```
 
-> TIPS: append .gitignore <- ./vendor
-
 # Use
 
 Install and Update
