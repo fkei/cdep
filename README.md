@@ -26,6 +26,7 @@ $ bash <(curl -s https://raw.githubusercontent.com/fkei/cdep/develop/install) /x
 
 Edit configure file. `cdep.conf`
 
+Example file: [https://github.com/fkei/stgoart/blob/master/cdep.conf](https://github.com/fkei/stgoart/blob/master/cdep.conf)
 ```
 # scm service domain. github.com, gitlab.com, bitbucket.org, golang.org, gopkg.in ...
 SERVICE="XXXXXXXXXX"
@@ -38,6 +39,8 @@ REPOSITORY="ZZZZZZZZZZ"
 ```
 
 Edit dependency package list file. `cdep.lock`
+
+Example file: [https://github.com/fkei/stgoart/blob/master/cdep.lock](https://github.com/fkei/stgoart/blob/master/cdep.lock)
 
 # Use
 
