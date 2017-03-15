@@ -52,7 +52,7 @@ ret=`fn_yes_no`
 
 
 
-curl -fsSL https://raw.githubusercontent.com/fkei/cdep/master/cdep -O ${OUT_SCRIPT}
+curl -fsSL https://raw.githubusercontent.com/fkei/cdep/develop/cdep -O ${OUT_SCRIPT}
 
 cat <<_EOT_ > ${OUT_CONF}
 # scm service domain. github.com, gitlab.com, bitbucket.org, golang.org, gopkg.in ...
