@@ -1,10 +1,25 @@
 # cdep
 Classic Go dependency tool
 
+Move the specified directory to one GOPATH.
+Vendor function is not used.
+
+It is very simple. Look at the example project.
+
+Example: [https://github.com/fkei/stgoart](https://github.com/fkei/stgoart)
+
 # install
 
+Currnet install directory.
+
 ```
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/fkei/cdep/develop/install)"
+$ bash <(curl -s https://raw.githubusercontent.com/fkei/cdep/develop/install) `pwd`
+```
+
+Select(/xxxx/yyyy) install directory.
+
+```
+$ bash <(curl -s https://raw.githubusercontent.com/fkei/cdep/develop/install) /xxxx/yyyy
 ```
 
 > Environment: `export CDEP_PATH={{INSTALL PATH}}`
