@@ -2,6 +2,29 @@
 Classic Go dependency tool
 
 Move the specified directory to one GOPATH.
+
+```
+$ tree -L 3
+.(Here GOPATH !!!!!!)
+├── README.md
+├── cdep
+├── cdep.conf
+├── cdep.lock
+├── pkg
+│   └── darwin_amd64
+│       ├── github.com
+│       ├── golang.org
+│       └── gopkg.in
+└── src
+    ├── github.com
+    │   └── xxxx
+    ├── golang.org
+    │   └── yyyy
+    └── gopkg.in
+        └── zzzz
+```
+
+
 Vendor function is not used.
 
 It is very simple. Look at the example project.
